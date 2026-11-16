@@ -26,17 +26,17 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: frontend
+        working-directory: AI-Placement-Portal/frontend
         run: npm install
 
       - name: Build project
-        working-directory: frontend
+        working-directory: AI-Placement-Portal/frontend
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist
+          path: AI-Placement-Portal/frontend/dist
 
   deploy:
     environment:
